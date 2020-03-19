@@ -2,9 +2,12 @@
 
 Rest API for patient / practitioner data developed with Django Rest Framework
 
-<<---||[ API GUIDE ]||--->>
+_________________________________________________________________________________
 
-||[[ Authentication Endpoints ]]||
+
+************ API GUIDE ************
+
+[ Authentication Endpoints ]
 
 All data sent and received in JSON format.
 
@@ -13,7 +16,7 @@ http://(server)/api/token/refresh [ POST ]
 
 Keys: (username) (password)
 
-||[[ Data Endpoints ]]||
+[ Data Endpoints ]
 
 http://(server)/api/patient [ GET , POST ]
 
