@@ -8,14 +8,14 @@ Rest API for patient / practitioner data developed with Django Rest Framework
 
 All data sent and received in JSON format.
 
-http://<server>/api/token [ POST ]
-http://<server>/api/token/refresh [ POST ]
+http://(server)/api/token [ POST ]
+http://(server)/api/token/refresh [ POST ]
 
-Keys: <username> <password>
+Keys: (username) (password)
 
 ||[[ Data Endpoints ]]||
 
-http://<server>/api/patient [ GET , POST ]
+http://(server)/api/patient [ GET , POST ]
 
 GET Notes:
 
@@ -33,14 +33,14 @@ POST Fields (All fields required unless specified):
 "firstname"
 "lastname"
 "address1"
-"address2" <not required>
+"address2" (not required)
 "city"
 "state"
 "zipcode"
 "phone1"
-"phone2" <not required>
+"phone2" (not required)
 "dob"
-"gender" <'Male' or 'Female'>
+"gender" ('Male' or 'Female')
 "policygroup"
 "policynumber"
 "policyname"
@@ -48,18 +48,18 @@ POST Fields (All fields required unless specified):
 "dr_firstname"
 "dr_lastname"
 "dr_address1"
-"dr_address2" <not required>
+"dr_address2" (not required)
 "dr_city"
 "dr_state"
 "dr_zipcode"
 "dr_phone1"
-"dr_phone2" <not required>
+"dr_phone2" (not required)
 "npi"
 "icd10s": [
 {
 "icd10"
 "agediagnosis"
-"relationship" <not required>
+"relationship" (not required)
 "sidefamily" <'Mother' or 'Father'>
 }
 ]
@@ -101,19 +101,19 @@ POST Example:
 ]
 }
 
-http://<server>/api/practioner [ GET ]
+http://(server)/api/practioner [ GET ]
 
 GET Notes:
 
 - Retrieves all practioners with contact information
 
-http://<server>/api/patient/<id> [ GET ]
+http://(server)/api/patient/(id) [ GET ]
 
 GET Notes:
 
 - Retrieves patient information including practioner NPI and icd10s
 
-http://<server>/api/practioner/<id> [ GET ]
+http://(server)/api/practioner/(id) [ GET ]
 
 GET Notes:
 
