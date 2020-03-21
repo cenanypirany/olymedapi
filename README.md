@@ -1,6 +1,6 @@
 # olymedapi
 
-Rest API developed with Django Rest Framework to maintain patient disease data (ICD10s) in relation to practitioner data.
+Rest API developed with Django Rest Framework to maintain patient disease data (ICD10s) along with related practitioner data.
 
 ## Installation
 
