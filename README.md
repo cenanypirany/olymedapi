@@ -15,6 +15,21 @@ Go to the project root directory with the 'Pipfile' and run the following comman
 ```
 pipenv sync
 ```
+Navigate to the root of Django project folder and migrate the data models:
+```
+cd olymedapi
+python manage.py makemigrations
+python manage.py migrate
+```
+Run script to create a proejct wide super user:
+```
+python manage.py createsuperuser
+```
+Run the server:
+```
+python manage.py runserver
+```
+
 
 ## API Endpoint Guide
 
