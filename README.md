@@ -1,9 +1,17 @@
 # olymedapi
 
-Rest API for patient / practitioner data developed with Django Rest Framework
-
+Rest API developed with Django Rest Framework to maintain patient disease data (ICD10s) in relation to practitioner data.
 
 ## Installation
+
+The server must have Python 3 installed along with pip (Python Package Index) for version 3.
+
+Use pip to instal pipenv
+
+```
+pip install pipenv
+```
+
 
 ## API Endpoint Guide
 
