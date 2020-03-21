@@ -5,7 +5,7 @@
 
 ## Installation
 
-************ API GUIDE ************
+## API Endpoint Guide
 
 [ Authentication Endpoints ]
 
