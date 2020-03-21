@@ -21,7 +21,7 @@ cd olymedapi
 python manage.py makemigrations
 python manage.py migrate
 ```
-Run script to create a proejct wide super user:
+Run script to create a Django admin super user:
 ```
 python manage.py createsuperuser
 ```
@@ -29,7 +29,6 @@ Run the server:
 ```
 python manage.py runserver
 ```
-
 
 ## API Endpoint Guide
 
