@@ -68,41 +68,43 @@ POST Fields (All fields required unless specified):
 ]
 }
 
-POST Example:
+#### Post Example
+```
 {
-"firstname":"John",
-"lastname":"Joseph",
-"address1":"111 Lower East Side",
-"address2":"Apt 3F",
-"city":"New York",
-"state":"NY",
-"zipcode":"10001",
-"phone1":"9171231234",
-"dob":"1966-1-1",
-"gender":"Male",
-"policygroup":"Medicare",
-"policynumber":"1234567890",
-"dr_firstname":"Max",
-"dr_lastname":"Power",
-"dr_address1":"222 E 35th St",
-"dr_city":"Elmhurst",
-"dr_state":"NY",
-"dr_zipcode":"10012",
-"dr_phone1":"7182223456",
-"npi":"9879879876",
-"icd10s": [
-{
-"icd10":"Z23.123",
-"agediagnosis":"23"
-},
-{
-"icd10":"Z43.123",
-"agediagnosis":"63",
-"relationship":"Uncle",
-"sidefamily":"Mother"
+  "firstname":"John",
+  "lastname":"Joseph",
+  "address1":"111 Lower East Side",
+  "address2":"Apt 3F",
+  "city":"New York",
+  "state":"NY",
+  "zipcode":"10001",
+  "phone1":"9171231234",
+  "dob":"1966-1-1",
+  "gender":"Male",
+  "policygroup":"Medicare",
+  "policynumber":"1234567890",
+  "dr_firstname":"Max",
+  "dr_lastname":"Power",
+  "dr_address1":"222 E 35th St",
+  "dr_city":"Elmhurst",
+  "dr_state":"NY",
+  "dr_zipcode":"10012",
+  "dr_phone1":"7182223456",
+  "npi":"9879879876",
+  "icd10s": [
+    {
+      "icd10":"Z23.123",
+      "agediagnosis":"23"
+    },
+    {
+      "icd10":"Z43.123",
+      "agediagnosis":"63",
+      "relationship":"Uncle",
+      "sidefamily":"Mother"
+    }
+  ]
 }
-]
-}
+```
 
 http://(server)/api/practioner [ GET ]
 
