@@ -6,12 +6,15 @@ Rest API developed with Django Rest Framework to maintain patient disease data (
 
 The server must have Python 3 installed along with pip (Python Package Index) for version 3.
 
-Use pip to instal pipenv
-
+Use pip to instal pipenv:
 ```
 pip install pipenv
 ```
 
+Go to the project root directory with the 'Pipfile' and run the following command to install all the Django Rest and JWT project dependencies:
+```
+pipenv sync
+```
 
 ## API Endpoint Guide
 
