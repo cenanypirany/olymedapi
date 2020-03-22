@@ -150,10 +150,10 @@ http://localhost:8000/api/practioner
 - Retrieves all practioners with contact information
 
 GET:
-http://localhost:8000/api/patient/(id)
+http://localhost:8000/api/patient/<ID>
 
 - Retrieves patient information including practioner NPI and ICD10s
 
-GET: http://localhost:8000/api/practioner/(npi)
+GET: http://localhost:8000/api/practioner/<NPI>
 
 - Retrieves practioner information including all associated patients with all information including ICD10s
