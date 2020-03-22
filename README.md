@@ -105,7 +105,7 @@ sidefamily | CharField('Mother' OR 'Father') | NO
 
 ### Post Example
 
-*Multiple ICD10 cases are nested into an array with the key 'ICD10s'*
+*Multiple ICD10 objects are nested into an array with the key 'ICD10s'*
 
 ```
 {
