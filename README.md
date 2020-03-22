@@ -37,16 +37,21 @@ All data is transmited (GET/POST) in JSON format.
 
 Keys: username, password
 
-POST | http://localhost:8000/api/token
-POST | http://(server)/api/token/refresh
+POST: 
+http://localhost:8000/api/token
+
+POST: 
+http://(server)/api/token/refresh
 
 **Data Endpoints**
 
-[GET]: http://localhost:8000/api/patient
+GET: 
+http://localhost:8000/api/patient
 
 - Retrieves all patients with contact information
 
-[POST]: http://localhost:8000/api/patient
+POST: 
+http://localhost:8000/api/patient
 
 - Post a single patient with all information
 - Practioner records are posted with patient records
