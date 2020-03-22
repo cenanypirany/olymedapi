@@ -41,7 +41,7 @@ POST:
 http://localhost:8000/api/token
 
 POST: 
-http://(server)/api/token/refresh
+http://localhost:8000/api/token/refresh
 
 **Data Endpoints**
 
@@ -57,47 +57,56 @@ http://localhost:8000/api/patient
 - Practioner records are posted with patient records
 - Practioner will not duplicate if Practioner already exists
 
-POST Fields:
+POST data is refactored into three data models: Patient, Practioner, and ICD10:
 
-Key Name | Required?
----------|----------
-firstname | YES
-lastname | YES
+**Patient**
 
-"address1"
-"address2" (not required)
-"city"
-"state"
-"zipcode"
-"phone1"
-"phone2" (not required)
-"dob"
-"gender" ('Male' or 'Female')
-"policygroup"
-"policynumber"
-"policyname"
-"policydob"
-"dr_firstname"
-"dr_lastname"
-"dr_address1"
-"dr_address2" (not required)
-"dr_city"
-"dr_state"
-"dr_zipcode"
-"dr_phone1"
-"dr_phone2" (not required)
-"npi"
-"icd10s": [
-{
-"icd10"
-"agediagnosis"
-"relationship" (not required)
-"sidefamily" <'Mother' or 'Father'>
-}
-]
-}
+Key Name | Data Type | Required?
+---------|-----------|----------
+firstname | CharField(50) | YES
+lastname | CharField(50) | YES
+address1 | CharField(50) | YES
+address2 | CharField(50) | NO
+city | CharField(30) | YES
+state | CharField(2) | YES
+zipcode | CharField(10) | YES
+phone1 | CharField(10) | YES
+phone2 | CharField(10) | NO
+dob | Date('YYYY-MM-DD') | YES
+gender | CharField('Male' OR 'Female') | YES
+policygroup | CharField(30) | YES
+policynumber | CharField(30) | YES
+policyname | CharField(100) | NO
+policydob | Date('YYYY-MM-DD') | NO
 
-#### Post Example
+**Practioner**
+
+Key Name | Data Type | Required?
+---------|-----------|----------
+dr_firstname | CharField(50) | YES
+dr_lastname | CharField(50) | YES
+dr_address1 | CharField(50) | YES
+dr_address2 | CharField(50) | NO
+dr_city | CharField(30) | YES
+dr_state | CharField(2) | YES
+dr_zipcode | CharField(10) | YES
+dr_phone1 | CharField(10) | YES
+dr_phone2 | CharField(10) | NO
+npi | CharField(10) | YES
+
+**ICD10**
+
+Key Name | Data Type | Required?
+---------|-----------|----------
+icd10 | CharField(10) | YES
+agediagnosis | Integer | YES
+relationship | CharField(20) | NO
+sidefamily | CharField('Mother' OR 'Father') | NO
+
+### Post Example
+
+- Multiple ICD10 cases are nested into an array with the key 'ICD10s'
+
 ```
 {
   "firstname":"John",
@@ -135,20 +144,16 @@ lastname | YES
 }
 ```
 
-http://(server)/api/practioner [ GET ]
-
-GET Notes:
+GET: 
+http://localhost:8000/api/practioner
 
 - Retrieves all practioners with contact information
 
-http://(server)/api/patient/(id) [ GET ]
-
-GET Notes:
+GET:
+http://localhost:8000/api/patient/(id)
 
 - Retrieves patient information including practioner NPI and icd10s
 
-http://(server)/api/practioner/(id) [ GET ]
-
-GET Notes:
+GET: http://localhost:8000/api/practioner/(id)
 
 - Retrieves practioner information including all associated patients with all information including ICD10s
