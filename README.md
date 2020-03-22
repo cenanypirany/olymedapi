@@ -6,7 +6,7 @@ Rest API developed with Django Rest Framework to maintain patient disease data (
 
 The server must have Python 3 installed along with Pip (Python Package Index) for version 3.
 
-Use pip to install pipenv:
+Use Pip to install Pipenv:
 ```
 pip install pipenv
 ```
@@ -35,7 +35,7 @@ All data is transmited (GET/POST) in JSON format.
 
 **Authentication Endpoints**
 
-Keys: username, password
+KEYS: 'username', 'password'
 
 POST: 
 http://localhost:8000/api/token
@@ -57,7 +57,7 @@ http://localhost:8000/api/patient
 - Practioner records are posted with patient records
 - Practioner will not duplicate if Practioner already exists
 
-POST data is refactored into three data models: Patient, Practioner, and ICD10:
+*POST data is refactored into three data models: Patient, Practioner, and ICD10:*
 
 **Patient**
 
@@ -105,7 +105,7 @@ sidefamily | CharField('Mother' OR 'Father') | NO
 
 ### Post Example
 
-- Multiple ICD10 cases are nested into an array with the key 'ICD10s'
+*Multiple ICD10 cases are nested into an array with the key 'ICD10s'*
 
 ```
 {
@@ -152,7 +152,7 @@ http://localhost:8000/api/practioner
 GET:
 http://localhost:8000/api/patient/(id)
 
-- Retrieves patient information including practioner NPI and icd10s
+- Retrieves patient information including practioner NPI and ICD10s
 
 GET: http://localhost:8000/api/practioner/(id)
 
