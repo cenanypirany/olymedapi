@@ -4,9 +4,9 @@ Rest API developed with Django Rest Framework to maintain patient disease data (
 
 ## Installation
 
-The server must have Python 3 installed along with pip (Python Package Index) for version 3.
+The server must have Python 3 installed along with Pip (Python Package Index) for version 3.
 
-Use pip to instal pipenv:
+Use pip to install pipenv:
 ```
 pip install pipenv
 ```
@@ -31,34 +31,27 @@ python manage.py runserver
 ```
 
 ## API Endpoint Guide
+All data is transmited [GET/POST] in JSON format.
 
-[ Authentication Endpoints ]
+**Authentication Endpoints**
 
-All data sent and received in JSON format.
+Keys: username, password
+[POST]: http://localhost:8000/api/token
+[POST]: http://(server)/api/token/refresh
 
-http://(server)/api/token [ POST ]
-http://(server)/api/token/refresh [ POST ]
-
-Keys: (username) (password)
-
-[ Data Endpoints ]
-
-http://(server)/api/patient [ GET , POST ]
-
-GET Notes:
-
+**Data Endpoints**
+[GET]: http://localhost:8000/api/patient
 - Retrieves all patients with contact information
 
-POST Notes:
-
+[POST]: http://localhost:8000/api/patient
 - Post a single patient with all information
 - Practioner records are posted with patient records
 - Practioner will not duplicate if Practioner already exists
 
-POST Fields (All fields required unless specified):
-
-{
-"firstname"
+POST Fields:
+Key Name | Required (YES/NO)
+_________| _________________
+firstname | YES
 "lastname"
 "address1"
 "address2" (not required)
