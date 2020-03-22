@@ -31,15 +31,14 @@ python manage.py runserver
 ```
 
 ## API Endpoint Guide
-All data is transmited [GET/POST] in JSON format.
+All data is transmited (GET/POST) in JSON format.
 
 **Authentication Endpoints**
 
 Keys: username, password
 
-[POST]: http://localhost:8000/api/token
-
-[POST]: http://(server)/api/token/refresh
+POST | http://localhost:8000/api/token
+POST | http://(server)/api/token/refresh
 
 **Data Endpoints**
 
